@@ -10,17 +10,17 @@ public class Main {
     int T = sc.nextInt();
     
     while(T-- > 0){
+        
+        int num = sc.nextInt();
       
-      int num = sc.nextInt();
-      
-      if(n>=1 && n<=25){
+      if(num >=1 && num <=25){
       
       int result = Fibonacci(num);
       
       System.out.println(result);
+      }
     }
   }
-}
 
      static int Fibonacci(int n){
        
