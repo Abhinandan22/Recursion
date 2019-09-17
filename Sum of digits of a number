@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+  public static void main(String args[]) throws IOException {
+    
+    //write your code here
+    Scanner sc = new Scanner(System.in);
+    int T = sc.nextInt();
+    
+    while(T-- > 0){
+      
+      int n = sc.nextInt();
+      
+      int sumdig = sumdigit(n);
+      System.out.println(sumdig);
+    }
+  }
+ 
+    static int sumdigit(int num){
+      
+      
+      if(num<=0)
+      return 0;
+      else
+      return num%10+sumdigit(num/10);
+    }
+}
