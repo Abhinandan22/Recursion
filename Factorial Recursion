@@ -1,29 +1,27 @@
 import java.util.*;
 import java.io.*;
+import java.math.*;
 
 public class Main {
-  public static void main(String args[]) throws IOException {
-    
-    //write your code here
-    Scanner sc = new Scanner(System.in);
-    int T = sc.nextInt();
-    
-    while(T-- > 0){
-      
-      int num = sc.nextInt();
-      
-      int factresult=factorial(num);
-      
-      System.out.println(factresult);
-    }
+ public static void main(String args[]) throws IOException {
+   //write your code here
+   Scanner sc = new Scanner(System.in);
+   int T = sc.nextInt();
+   while(T-- > 0){
+     
+     int num = sc.nextInt();
+     
+     if(num>=1 && num<=25){
+     BigInteger factresult=factorial(num);
+     System.out.println(factresult);
+   }
   }
-    static int factorial(int number){
-      
-      
-      if(number==1||number==0)
-      return 1 ;
-      else
-      return number*factorial(number-1);
-      
-    }
  }
+   static BigInteger factorial(int number){
+     
+     if(number==1||number==0)
+     return BigInteger.ONE ;
+     else
+     return BigInteger.valueOf(number).multiply(factorial(number-1));
+   }
+}
