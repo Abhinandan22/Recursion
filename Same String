@@ -1,0 +1,51 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+  public static void main(String args[]) throws IOException {
+    
+    //write your code here
+    Scanner sc = new Scanner(System.in);
+    int T = sc.nextInt();
+    
+    while(T-- > 0){
+      
+      String str = sc.nextLine();
+      
+      if (isPalindrome(str)) 
+            System.out.println("Yes"); 
+        else
+            System.out.println("No");  
+    } 
+  }
+    
+  static boolean isPalindrome(String str){
+    
+    int n = str.length();
+    
+    if(n==0)
+    
+    return true;
+    
+    else
+    
+    return isPalRec(str,0,n-1);
+  }
+  
+  
+  static boolean isPalRec(String str,int firstchar,int lastchar){
+   
+    if(firstchar == lastchar)
+    return true;
+    
+    if ((str.charAt(firstchar)) != (str.charAt(lastchar))) 
+            return false; 
+ 
+ if (firstchar+1 < lastchar) 
+            return isPalRec(str, firstchar + 1, lastchar - 1); 
+  
+        return true; 
+  }
+  
+  
+}
