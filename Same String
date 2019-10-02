@@ -10,7 +10,7 @@ public class Main {
     
     while(T-- > 0){
       
-      String str = sc.nextLine();
+      String str = sc.next();
       
       if (isPalindrome(str)) 
             System.out.println("Yes"); 
