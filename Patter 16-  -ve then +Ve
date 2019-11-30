@@ -1,50 +1,52 @@
 import java.util.*;
 import java.io.*;
+
 public class Main {
- public static void main(String args[]) throws IOException {
-   //write your code here
-   Scanner sc = new Scanner(System.in);
-   int T = sc.nextInt();
-   while(T-- > 0){
-     int num = sc.nextInt();
-     Pattern(num);
+  public static void main(String args[]) throws IOException {
+    
+    //write your code here
+    Scanner sc = new Scanner(System.in);
+    int T = sc.nextInt();
+    
+    while(T-- > 0){
+      
+      int num = sc.nextInt();
+     
+      Pattern(num);
+     
+     }
+  }
+  
+   static void Pattern(int newnum){
+     
+     final int origNum = newnum;
+     System.out.print(newnum+" ");
+     newnum-=5;
+     
+     if(newnum > 0)
+     Pattern(newnum);
+     
+     else
+     System.out.print(newnum+" ");
+     Pattern2(newnum,origNum);
    }
- }
-     static void Pattern(int num){
-       
-       int Newnum = 0;
-       
-       int newno = num;
-       
-        if(num > 0 ){
-        System.out.print(num+" ");
-        Newnum=num-5;
-        Pattern(Newnum);
-        }
-        
-        
-        int newn = Newnum;
-        
-        if(Newnum < 0){
-        System.out.print(newn+" ");
-        Newnum = newn+5;
-        }
-        
-        if(num!=Newnum)
-        Pattern2(Newnum,newno);
-     }
    
- 
-  static void Pattern2(int Newnum,int newnumber){
+  
+  static void Pattern2(int num,int no){
+    
+    if(num<=no){
+      num+=5;
+      System.out.print(num+" ");
      
-      if(Newnum<=newnumber){
-         
-          System.out.print(Newnum+ " ");
-          Newnum+=5;
-          Pattern2(Newnum,newnumber);
-      }
-     
-     
-     
-     }
+    }
+  
+    
+  }
+  
+   
 }
+
+   
+   
+   
+   
